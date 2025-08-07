@@ -7,7 +7,7 @@ const stripe = (() => {
     if (!process.env.STRIPE) {
         throw new Error("Stripe API key is not defined in environment variables");
     }
-    return new Stripe(process.env.STRIPE, { apiVersion: '2025-03-31.basil' });
+    return new Stripe(process.env.STRIPE, { apiVersion: '2025-07-30.basil' });
 })();
 
 const stripeController = {

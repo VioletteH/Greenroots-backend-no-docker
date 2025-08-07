@@ -1,0 +1,117 @@
+#  ✅ OK
+#  🛠️ KO
+
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibWFzdGVyQGdyZWVucm9vdHMuY29tIiwiaWF0IjoxNzQ5MzEyNDA4LCJleHAiOjE3NDkzNTU2MDh9._nSo1NfGx0CyxZw-zfJqc4mgyUpo8nv5xmoElcIKQwc
+
+### AUTHENTICATION
+
+###  ✅ routes.post("/login", authController.login);
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "master@greenroots.com",
+  "password": "masterGreenroots#1"
+}
+
+### 🛠️ routes.post("/register", authController.register);
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "firstname": "test",
+  "email": "test2@gmail.com",
+  "password": "azertyuiop",
+}
+
+### TREES
+
+### 🛠️ routes.post("/trees", treeController.addTree);
+POST http://localhost:3000/trees
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "name": "Figuier",
+    "scientific_name": "Figuerus",
+    "image": "figuier.jpg",
+    "category": "Fruitier",
+    "description": "Arbre a confiture",
+    "co2": 32,
+    "o2": 54,
+    "price": 75
+}
+
+### FOREST
+
+### 🛠️ routes.post("/forests", forestController.addForest);
+POST http://localhost:3000/forests
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "name": "Forêt des Pyrénées Orientales",
+    "association": "GreenRoots",
+    "image": "imageforet9.jpg",
+    "description": "Une super forêt sur une super montagne",
+    "country": "France",
+    "locationX": 20.000000,
+    "locationY": -75.000000
+}
+
+### USERS
+
+### ✅ routes.post("/users", userController.addUser);
+POST http://localhost:3000/users
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "firstname": "test",
+    "lastname": "test",
+    "email": "test@gmail.com",
+    "password": "azertyuiop",
+    "phone": "0788888888",
+    "address": "10 av du capitole",
+    "zipcode": "31000",
+    "city": "Washigton",
+    "role": "user"
+}
+
+### ORDERS
+
+### ✅ routes.post("/orders", orderController.addOrder);
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "user_id": 11,
+    "total_price": 200,
+    "status": 2
+}
+
+### 🛠️ routes.post("/orders/:id/items", itemController.addOrderItem);
+POST http://localhost:3000/orders/:id/items
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "order_id": 6,
+    "tree_id": 1,
+    "name": "sapin",
+    "quantity": 2,
+    "price": 50
+}
+
+### ✅ routes.post("/create-payment-intent", stripeController.intent);
+POST http://localhost:3000/create-payment-intent
+Content-Type: application/json
+
+{
+    "amount": 20000,
+    "currency": "eur",
+    "payment_method_types": ["card"]
+}
+
+		

@@ -1,0 +1,50 @@
+#  ✅ OK
+#  🛠️ KO
+
+@authToken = eeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibWFzdGVyQGdyZWVucm9vdHMuY29tIiwiaWF0IjoxNzQ5MzEyNDA4LCJleHAiOjE3NDkzNTU2MDh9._nSo1NfGx0CyxZw-zfJqc4mgyUpo8nv5xmoElcIKQwc
+
+### TREES
+
+### 🛠️ routes.patch("/trees/:id", treeController.updateTree);		
+PATCH http://localhost:3000/trees/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "category": "Fruitier"
+}
+
+### FOREST
+
+### 🛠️ routes.patch("/forests/:id", forestController.updateForest);
+PATCH http://localhost:3000/forests/9
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "country": "Espagne"
+}
+
+### USER
+
+### 🛠️ routes.patch("/users/:id", userController.updateUser);
+
+PATCH http://localhost:3000/users/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "zipcode": "32100"
+}
+
+### ORDER
+
+### 🛠️ routes.patch("/order/:id", orderController.updateOrder);
+
+PATCH http://localhost:3000/orders/11
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "status": 3
+}

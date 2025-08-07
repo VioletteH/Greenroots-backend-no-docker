@@ -1,0 +1,25 @@
+#  ✅ Operational
+#  🛠️ Controller to do
+
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibWFzdGVyQGdyZWVucm9vdHMuY29tIiwiaWF0IjoxNzQ5MzEyNDA4LCJleHAiOjE3NDkzNTU2MDh9._nSo1NfGx0CyxZw-zfJqc4mgyUpo8nv5xmoElcIKQwc
+
+### TREES
+
+### ✅ routes.delete("/trees/:id", treeController.deleteTree);
+DELETE http://localhost:3000/trees/26
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+### FOREST
+
+### 🛠️ routes.delete("/forests/:id", forestController.deleteForest);
+DELETE http://localhost:3000/forests/11
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+### USER
+
+### 🛠️ routes.delete("/users/:id", userController.deleteUser);
+DELETE http://localhost:3000/users/19
+Content-Type: application/json
+Authorization: Bearer {{authToken}}

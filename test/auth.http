@@ -1,0 +1,28 @@
+#  ✅ OK
+#  🛠️ KO
+
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibWFzdGVyQGdyZWVucm9vdHMuY29tIiwiaWF0IjoxNzQ5MzEyNDA4LCJleHAiOjE3NDkzNTU2MDh9._nSo1NfGx0CyxZw-zfJqc4mgyUpo8nv5xmoElcIKQwc
+
+### REGISTER
+
+### 🛠️ routes.post("/register", authController.register);
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+  "firstname": "test",
+  "email": "test2@gmail.com",
+  "password": "azertyuiop",
+}
+
+### LOGIN
+
+###  ✅ routes.post("/login", authController.login);
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "master@greenroots.com",
+  "password": "masterGreenroots#1"
+}
+

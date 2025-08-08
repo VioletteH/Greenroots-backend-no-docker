@@ -58,7 +58,7 @@ app.use(
           "'unsafe-inline'" 
         ],
         styleSrc: ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
-        imgSrc: ["'self'", "data:", "blob:", "http://localhost:3001", "http://localhost:5173", "http://localhost:5174", "https://greenroots-backend-no-docker.onrender.com"], // autoriser les images locales et base64
+        imgSrc: ["'self'", "data:", "blob:", "http://localhost:3001", "http://localhost:5173", "http://localhost:5174", "https://greenroots-backend-no-docker.onrender.com", "https://greenrooters.netlify.app"], // autoriser les images locales et base64
         connectSrc: ["'self'", "https://api.stripe.com"], 
         frameSrc: ["'self'", "https://js.stripe.com"], 
         objectSrc: ["'none'"],

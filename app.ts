@@ -13,7 +13,7 @@ const allowedOrigins = [
   process.env.BACKOFFICE,
   process.env.FRONTA,
   process.env.FRONTB,
-];
+].filter(Boolean);
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -27,16 +27,9 @@ app.use(cors({
   credentials: true
 }));
 
-// Appliquer CORS uniquement pour les images dans /uploads
+// CORS on pictures in /uploads
 app.use('/uploads', cors({
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      process.env.BACKOFFICE,
-      process.env.FRONTA,
-      process.env.FRONTB,
-      'https://greenrooters.netlify.app' 
-    ].filter(Boolean); 
-
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
